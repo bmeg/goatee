@@ -1,0 +1,8 @@
+{
+    "inputs" : [
+        {"name" : "job1", "state": "queued"},
+        {"name" : "job2", "state": "waiting"},
+        {"name" : "job3", "state": "running"},
+        {"name" : "job4", "state": "done"}
+    ]
+}

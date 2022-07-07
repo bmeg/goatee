@@ -1,0 +1,8 @@
+{
+    "name": "job1",
+    "inputs" : [
+        "/home/test1.txt",
+        "/home/test2.txt",
+        "/home/test3.txt"
+    ]
+}

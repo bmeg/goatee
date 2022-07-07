@@ -1,0 +1,6 @@
+{
+    "name": "job1",
+    "inputs" : {
+        "{{#each names}}" : "/home/{{this}}.txt"
+    }
+}

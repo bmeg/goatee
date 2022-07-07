@@ -1,0 +1,11 @@
+{
+    "data" : {
+        "{{#merge}}" : {
+            "{{#each inputs}}" : {
+                "task_{{name}}" : {
+                    "state" : "{{state}}"
+                }
+            }
+        }
+    }
+}

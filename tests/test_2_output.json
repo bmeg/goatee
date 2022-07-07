@@ -1,0 +1,16 @@
+{
+    "download" : [
+        {
+            "commandLine": "curl -o ../../source/pathway_commons/PathwayCommons12.reconx.BIOPAX.owl.gz https://www.pathwaycommons.org/archives/PC2/v12/PathwayCommons12.reconx.BIOPAX.owl.gz",
+            "outputs": [ "../../source/pathway_commons/PathwayCommons12.reconx.BIOPAX.owl.gz" ]
+        },
+        {
+            "commandLine": "curl -o ../../source/pathway_commons/PathwayCommons12.reactome.BIOPAX.owl.gz https://www.pathwaycommons.org/archives/PC2/v12/PathwayCommons12.reactome.BIOPAX.owl.gz",
+            "outputs": [ "../../source/pathway_commons/PathwayCommons12.reactome.BIOPAX.owl.gz" ]
+        },
+        {
+            "commandLine": "curl -o ../../source/pathway_commons/PathwayCommons12.psp.BIOPAX.owl.gz https://www.pathwaycommons.org/archives/PC2/v12/PathwayCommons12.psp.BIOPAX.owl.gz",
+            "outputs": [ "../../source/pathway_commons/PathwayCommons12.psp.BIOPAX.owl.gz" ]
+        }
+    ]    
+}

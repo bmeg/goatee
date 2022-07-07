@@ -1,0 +1,22 @@
+{
+    "task_job1" : {
+        "state" : "queued"
+    },
+    "task_job2" : {
+        "state" : "waiting"
+    },
+    "task_job3" : {
+        "state" : "running"
+    },
+    "task_job4" : {
+        "state" : "done"
+    },
+    "gather" : {
+        "inputs" : [
+            "task_job1",
+            "task_job2",
+            "task_job3",
+            "task_job4"
+        ]
+    }
+}

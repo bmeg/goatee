@@ -1,0 +1,16 @@
+{
+	"{{#merge}}" : {
+		"{{#each inputs}}" : {
+			"task_{{name}}" : {
+				"state" : "{{state}}"
+			}
+		}
+	},
+	"gather" : {
+		"inputs": {
+			"{{#each inputs}}" : {
+				"id" : "task_{{name}}"
+			}
+		}
+	}
+}
