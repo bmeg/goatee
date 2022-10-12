@@ -31,7 +31,7 @@ For example the structure `{ "{{#each names}}" : { "name" : "{{this}}" } }` with
 }
 ```
 
-### Example 2 Template
+### Example 2 Output
 ```
 {
     "name": "job1",
@@ -41,4 +41,70 @@ For example the structure `{ "{{#each names}}" : { "name" : "{{this}}" } }` with
         "/home/test3.txt"
     ]
 }
+```
+
+
+## Example 2
+
+Because the pattern for unrolling input arrays returns a dictionary, there needs to be a way to merge multiple sub-structure outputs into a single dictionary.
+
+For the input 
+```
+{
+    "inputs" : [
+        {"name" : "job1", "state": "queued"},
+        {"name" : "job2", "state": "waiting"},
+        {"name" : "job3", "state": "running"},
+        {"name" : "job4", "state": "done"}
+    ]
+}
+```
+
+and the template 
+
+```
+{
+    "{{#each inputs}}" : {
+		"task_{{name}}" : {
+			"state" : "{{state}}"
+		}
+	}
+}
+```
+
+we get the results
+
+```
+[
+    {"task_job1" : {"state": "queued"} }
+    {"task_job2" : {"state": "waiting"} }
+    {"task_job3" : {"state": "running"} }
+    {"task_job4" : {"state": "done"} }
+]
+```
+
+If theese elements belong to a `{{#merge}}` they will be merged into a single dictionary.
+
+So the template 
+```
+{   
+    "{{#merge}}" : {
+        "{{#each inputs}}" : {
+            "task_{{name}}" : {
+                "state" : "{{state}}"
+            }
+        }
+    }
+}
+```
+
+Results in:
+```
+{
+    "task_job1" : {"state": "queued"},
+    "task_job2" : {"state": "waiting"},
+    "task_job3" : {"state": "running"},
+    "task_job4" : {"state": "done"}
+}
+
 ```
