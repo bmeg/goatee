@@ -76,9 +76,9 @@ we get the results
 
 ```
 [
-    {"task_job1" : {"state": "queued"} }
-    {"task_job2" : {"state": "waiting"} }
-    {"task_job3" : {"state": "running"} }
+    {"task_job1" : {"state": "queued"} },
+    {"task_job2" : {"state": "waiting"} },
+    {"task_job3" : {"state": "running"} },
     {"task_job4" : {"state": "done"} }
 ]
 ```
