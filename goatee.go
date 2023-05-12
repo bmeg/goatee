@@ -42,6 +42,10 @@ func GetField(input any, field string) (any, bool) {
 	return nil, false
 }
 
+func RenderString(template string, input any) (string, error) {
+	return raymond.Render(template, input)
+}
+
 func Render(template any, input any) (any, error) {
 	switch tv := template.(type) {
 	case map[string]any:
